@@ -45,8 +45,8 @@ const orgAbi = [
   },
 ];
 
-export default function Home() {
-  const [balance, setBalance] = useState<number>();
+export default function Page() {
+  const [balance, setBalance] = useState<number>(0);
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -77,11 +77,11 @@ export default function Home() {
         ethProvider
       );
 
-      let balanceValue = await orgContract.balance();
-      balanceValue += await orgContractBase.balance();
-      balanceValue += await orgContractEth.balance();
+      let balanceValue = await orgContract?.balance();
+      balanceValue += await orgContractBase?.balance();
+      balanceValue += await orgContractEth?.balance();
 
-      setBalance(parseInt(balanceValue.toString()) / 1000000);
+      setBalance(parseInt(balanceValue?.toString()) / 1000000);
     };
 
     fetchBalance();

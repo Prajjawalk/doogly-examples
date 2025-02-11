@@ -1,8 +1,9 @@
 "use client";
-import { DooglyDonateButton } from "@doogly/doogly-donate-component";
-import Image from "next/image";
 
-export default function Home() {
+import Image from "next/image";
+// import { DooglyDonateButton } from "@doogly/doogly-donate-component";
+
+export default function Page() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -16,7 +17,7 @@ export default function Home() {
             height={200}
           />
         </div>
-        <div className="w-full flex justify-center">
+        {/* <div className="w-full flex justify-center">
           <DooglyDonateButton
             buttonText="Donate Now"
             modalTitle="Support Our Cause"
@@ -28,13 +29,14 @@ export default function Home() {
                 "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
             }}
             modalStyles={{
+              backgroundColor: "white",
               buttonColor: "#AF3BC9",
               textColor: "#AF3BC9",
               headingColor: "#AF3BC9",
             }}
             buttonClassName="bg-[#AF3BC9] text-white border-none py-2 px-4 text-center text-lg rounded transition duration-300 ease-in-out hover:bg-purple-700"
           />
-        </div>
+        </div> */}
       </main>
     </div>
   );
