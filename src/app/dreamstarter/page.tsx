@@ -1,5 +1,5 @@
 "use client";
-import { DooglyDonateButton } from "@doogly/doogly-donate-component";
+import { DooglyButton } from "@doogly/react";
 import { ethers } from "ethers";
 import { useState } from "react";
 
@@ -50,6 +50,7 @@ export default function Page() {
   const KIRANA = "0xfEC68cBF04F7C069628cF9E9c609abC95f9a476B";
 
   const abiInterface = new ethers.Interface(swapRouterAbi);
+  console.log(recipient);
   const callData = abiInterface.encodeFunctionData("exactInputSingle", [
     {
       tokenIn: WETH9,
@@ -101,21 +102,22 @@ export default function Page() {
           better prices, authentic products, and community growth while enabling
           transparent supply chain tracking.
         </div>
-        <DooglyDonateButton
+        <DooglyButton
           buttonText="Donate Now"
           modalTitle="Support Our Cause"
           apiUrl="https://api.doogly.org"
           config={{
             destinationChain: "137",
-            destinationAddress: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45", // Destination address (Dummy if postSwapHook is used)
+            destinationAddress:
+              recipient ?? "0x0000000000000000000000000000000000000000", // Destination address (Dummy if postSwapHook is used)
             destinationOutputTokenAddress:
               "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", // Output token at destination
           }}
           modalStyles={{
-            backgroundColor: "white",
+            backgroundColor: "#FFFFFF",
             headingColor: "#892BE2",
             buttonColor: "#892BE2",
-            textColor: "#892BE2",
+            textColor: "#FFFFFF",
           }}
           postSwapHook={hookData} // Post swap hook to execute contract calls after swap from bridge itself
           buttonClassName="bg-purple-600 text-white border-none py-2 px-4 text-center text-lg rounded transition duration-300 ease-in-out hover:bg-purple-700"

@@ -1,5 +1,5 @@
 "use client";
-import { DooglyDonateButton } from "@doogly/doogly-donate-component";
+import { DooglyButton } from "@doogly/react";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 
@@ -143,7 +143,7 @@ export default function Page() {
           life, property, and the environment by providing essential equipment,
           education, and public outreach programs to supplement city resources.
         </div>
-        <DooglyDonateButton
+        <DooglyButton
           buttonText="Donate Now"
           modalTitle="Support Our Cause"
           apiUrl="https://api.doogly.org"
@@ -152,13 +152,19 @@ export default function Page() {
             destinationAddress: "0x264f9EF85C21DE49451c3636116668889Ca41aab", // Destination address (Dummy if postSwapHook is used)
             destinationOutputTokenAddress:
               "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", // Output token at destination
+            initialAmount: "0.0001",
+            initialChainId: "8453",
+            initialToken: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           }}
           modalStyles={{
-            backgroundColor: "white",
+            backgroundColor: "#FFFFFF",
             headingColor: "#892BE2",
             buttonColor: "#892BE2",
-            textColor: "#892BE2",
+            textColor: "white",
           }}
+          // callback={console.log}
+          // webhookUrl="https://google.com"
+          // webHookData="abc"
           postSwapHook={hookData} // Post swap hook to execute contract calls after swap from bridge itself
           buttonClassName="bg-purple-600 text-white border-none py-2 px-4 text-center text-lg rounded transition duration-300 ease-in-out hover:bg-purple-700"
         />

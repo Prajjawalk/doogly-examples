@@ -1,5 +1,5 @@
 "use client";
-import { DooglyDonateButton } from "@doogly/doogly-donate-component";
+import { DooglyButton } from "@doogly/react";
 
 export default function Page() {
   const receivingAddress = "0x83b04F6E5B58145372Ca9404B63403796C3fA6Cc"; // Receiving address
@@ -30,7 +30,7 @@ export default function Page() {
           protection contre toute forme de discrimination des enfants pour un
           développement harmonieux.
         </div>
-        <DooglyDonateButton
+        <DooglyButton
           buttonText="Donate Now"
           modalTitle="Support Our Cause"
           apiUrl="https://api.doogly.org"
