@@ -13,7 +13,7 @@ export default function Page() {
           as USDC on Arcadia contract deployed on Base. Deposited funds earn
           passive yield by providing liquidity for margin accounts
         </div>
-        <div className="text-md text-[#AF3BC9] mt-5">
+        <div className="text-md text-[#AF3BC9] mt-1">
           For more details, checkout Arcadia Protocol -
           https://arcadia.finance/pool/8453/0x3ec4a293Fb906DD2Cd440c20dECB250DeF141dF1
         </div>
