@@ -75,10 +75,10 @@ export default function Page() {
     {
       target: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45" as `0x${string}`, // Uniswap v3 router contract
       callData: callData as `0x${string}`, // Swap function call
-      callType: 2, // Utlize full native token balance after bridging
+      callType: 1, // Utlize full native token balance after bridging
       tokenAddress:
         "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270" as `0x${string}`, // WETH9 on Polygon
-      inputPos: 4, // Modify amount in 4th position
+      inputPos: 5, // Modify amount in 5th position (0th represents struct, then 4th in seq)
     },
   ];
 
@@ -111,7 +111,7 @@ export default function Page() {
             destinationAddress:
               recipient ?? "0x0000000000000000000000000000000000000000", // Destination address (Dummy if postSwapHook is used)
             destinationOutputTokenAddress:
-              "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", // Output token at destination
+              "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270", // Output token at destination
           }}
           modalStyles={{
             backgroundColor: "#FFFFFF",
