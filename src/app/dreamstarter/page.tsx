@@ -75,10 +75,10 @@ export default function Page() {
     {
       target: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45" as `0x${string}`, // Uniswap v3 router contract
       callData: callData as `0x${string}`, // Swap function call
-      callType: 1, // Utlize full native token balance after bridging
+      callType: 1, // Utlize full token balance after bridging
       tokenAddress:
         "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270" as `0x${string}`, // WETH9 on Polygon
-      inputPos: 5, // Modify amount in 5th position (0th represents struct, then 4th in seq)
+      inputPos: 4, // Modify amount in 4th position (0th represents struct, then 4th in seq)
     },
   ];
 
