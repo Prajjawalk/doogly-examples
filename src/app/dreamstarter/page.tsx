@@ -3,6 +3,18 @@ import { DooglyButton } from "@doogly/react";
 import { ethers } from "ethers";
 import { useState } from "react";
 
+const ideaFactoryAbi = [
+  {
+    inputs: [
+      { internalType: "uint256", name: "currentSupply", type: "uint256" },
+      { internalType: "uint256", name: "tokensToBuy", type: "uint256" },
+    ],
+    name: "calculateCost",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "pure",
+    type: "function",
+  },
+];
 const swapRouterAbi = [
   {
     inputs: [

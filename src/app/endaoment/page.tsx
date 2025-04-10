@@ -160,7 +160,7 @@ export default function Page() {
             backgroundColor: "#FFFFFF",
             headingColor: "#892BE2",
             buttonColor: "#892BE2",
-            textColor: "white",
+            textColor: "#892BE2",
           }}
           // callback={console.log}
           // webhookUrl="https://google.com"
