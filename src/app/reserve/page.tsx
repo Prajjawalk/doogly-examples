@@ -120,7 +120,7 @@ export default function Page() {
           modalStyles={{
             backgroundColor: "#FFFFFF",
             buttonColor: "#AF3BC9",
-            textColor: "#FFFFFF",
+            textColor: "#AF3BC9",
             headingColor: "#AF3BC9",
           }}
         />
